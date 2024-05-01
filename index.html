@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh en-US ja" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小蓝塾</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      .midnightblue{
+        color: #1D24CA;
+        font-weight: bolder;
+      }
+
+      .feature-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: .75rem;
+      }
+
+      .feature h3{
+        font-weight: 600;
+        font-size: 28px !important;
+      }
+
+      .carousel-flex-container{
+        display: flex;
+        justify-content: center;
+      }
+
+      .carousel{
+        width: 90%;
+      }
+
+      .carousel-control-prev{
+        left: -8vw;
+      }
+
+      .carousel-control-next{
+        right: -8vw;
+      }
+
+      .carousel > button.carousel-control-prev > span.carousel-control-prev-icon{
+        background-color: #7D7C7C;
+        background-image: none;
+        mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+      }
+
+      .carousel > button.carousel-control-next > span.carousel-control-next-icon{
+        background-color: #7D7C7C;
+        background-image: none;
+        mask-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .carousel .card{
+        margin: 0;
+      }
+
+      .carousel-indicators [data-bs-target]{
+        background-color: #B4B4B8;
+      }
+
+      .course-title{
+        font-weight: 600;
+        font-size: 35px;
+      }
+
+      .card-title{
+        font-weight: bold;
+      }
+
+      .card-body > p.card-text{
+        text-align: end;
+        margin-right: 15px;
+      }
+
+      ul{
+        list-style: none;
+      }
+
+      @media(max-width:768px){
+        .card img{
+          height: 300px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      @media(min-width:1200px){
+        nav *{
+          font-size: 1.2rem;
+        }
+
+        .card-body > p.card-text{
+          text-align: start;
+          margin-left: 15px;
+        }
+
+      }
+    </style>
+</head>
+
+<body>
+   <!--navbar-->
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="./index.html"><img src="./assets/images/小蓝塾logo放大版.jpg" alt="小蓝塾头像logo" height="40px"/><img src="./assets/images/文字logo.jpg" alt="小蓝塾文字logo" height="40px"/></a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">关于小蓝</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">课程</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#scrollspyHeading2">EJU</a></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading3">升学辅导</a></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading4">东大保证班（没修好，点不了）</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="./public/courses.html">查看全部</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading5">我要咨询</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./public/students.html">我是学员</a>
+          </li>
+        </ul>
+      </nav>
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+
+    <!--hero section-->
+    <div id="scrollspyHeading1">
+        <div class="container my-5">
+            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+              <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1 text-body-emphasis" style="font-size: 2.5rem; margin-bottom: 1.5rem;">专注上位大学辅导</h1>
+                <p class="lead">我们是一家专注<span class="midnightblue">上位大学</span>辅导的全线上私塾。这块写一写最能传达出来我们牛逼的话。你稍微合计合计。底下的按钮也可以干点别的。</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">查看课程</button>
+                  <button type="button" class="btn btn-outline-secondary btn-lg px-4">我要咨询</button>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                  <img class="rounded-lg-3" src="./assets/images/bird.jpg" alt="" width="720" >
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--feature section-->
+    <div class="container px-4 py-5" id="featured-3">
+      <h2 class="pb-2 border-bottom">为什么大家选择小蓝？</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+              <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+              <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1z"/>
+            </svg>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">高质量 个性化</h3>
+          <p>全小班制，按照同学的程度灵活安排课程内容。<br/>专业高效，完全针对考点设计学案，一期课程可<span class="midnightblue">零基础直达高分段</span>。</p>
+          <a href="./public/courses.html" class="icon-link">
+            查看详情
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </a>
+        </div>
+       
+        <div class="feature col">
+          <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+              <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+            </svg>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">业内最强师资</h3>
+          <p>我们的老师全部出身日本<span class="midnightblue">top3</span>院校，具有极丰富的经验。还有啥可以吹的也加上，暂时想不起来了。</p>
+          <a href="./public/facalty.html" class="icon-link">
+            查看详情
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--Couse cards shown by carousel-->
+    <!--之后加一个title-->
+<div id="scrollspyHeading2" class="container">
+  <h2 class="pb-2 border-bottom container course-title">EJU</h2>
+  <div class="carousel-flex-container">
+    <div id="carousel1" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./assets/images/cat.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">理科小班</h5>
+                  <ul class="card-text">
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 90小时数学+90小时物理+90小时化学</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 全套知识点讲解+真题练习</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 30周，<span class="midnightblue">零基础到高分段</span></li>
+                  </ul>
+                  <p class="card-text"><small class="text-body-secondary">最新一期：2024年6月开班</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./assets/images/cat.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">文科小班</h5>
+                  <ul class="card-text">
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 90小时数学+90小时文综</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 全套知识点讲解+真题练习</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 30周，<span class="midnightblue">零基础到高分段</span></li>
+                  </ul>
+                  <p class="card-text"><small class="text-body-secondary">最新一期：2024年6月开班</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card mb-3" >
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./assets/images/cat.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">一对一</h5>
+                  <ul class="card-text">
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 个性化定制，哪里不会讲哪里</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 灵活的时间安排</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/><span class="midnightblue"> 可短期快速提高</span></li>
+                  </ul>
+                  <p class="card-text"><small class="text-body-secondary">全年随时开班</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--升学辅导-->
+<div class="container pt-4" id="scrollspyHeading3">
+  <h2 class="pb-2 border-bottom container course-title" style="font-size: 28px;">升学辅导</h2>
+  <div class="carousel-flex-container">
+    <div id="carousel2" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./assets/images/cat.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">志望理由/面试/校内考</h5>
+                  <ul class="card-text">
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 全1v1课程，量身定制考学计划</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 超强师资，<span class="midnightblue">top5院校 对口专业</span>的老师授课</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 可根据考试安排灵活调整课时</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 免费择校咨询、出愿指导</li>
+                  </ul>
+                  <p class="card-text"><small class="text-body-secondary">全年随时开班</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="scrollspyHeading4" class="carousel-item" id="scrollspyHeading5">
+          <div class="card mb-3">
+            <div class="row g-0" >
+              <div class="col-md-4">
+                <img src="./assets/images/cat.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">东大二试保证班</h5>
+                  <ul class="card-text">
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 最专业的东大小论文与面试培训</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/> 名师授课</li>
+                    <li class="card-text-list-item"><img src="./assets/images/check2-circle.svg" alt="checkmark" style="height: 20px; width: 20px;"/><span class="midnightblue"> 不合格全额退款</span></li>
+                  </ul>
+                  <p class="card-text"><small class="text-body-secondary">最新一期：2024年12月开班</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!--Footer-->
+<div class="container" id="scrollspyHeading5">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>主页</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">小蓝是谁</a></li>
+          <li class="nav-item mb-2"><a href="#featured-3" class="nav-link p-0 text-body-secondary">小蓝的特长</a></li>
+          <li class="nav-item mb-2"><a href="#scrollspyHeading2" class="nav-link p-0 text-body-secondary">小蓝的课程清单</a></li>
+          <li class="nav-item mb-2"><a href="#scrollspyHeading5" class="nav-link p-0 text-body-secondary">小蓝的联系方式</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-4">
+        <h5>详细</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="./public/courses.html" class="nav-link p-0 text-body-secondary">小蓝的课程介绍</a></li>
+          <li class="nav-item mb-2"><a href="./public/facalty.html" class="nav-link p-0 text-body-secondary">小蓝的老师们</a></li>
+          <li class="nav-item mb-2"><a href="./public/achievements.html" class="nav-link p-0 text-body-secondary">小蓝的成绩</a></li>
+          <li class="nav-item mb-2"><a href="./public/students.html" class="nav-link p-0 text-body-secondary">小蓝学员登录</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5 style="font-weight: bold;">订阅小蓝</h5>
+          <p>接收各种考学资讯、开班提醒</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="邮箱地址">
+            <button class="btn btn-primary" type="button" style="min-width: max-content;">订阅</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2024 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><button type="button" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="./assets/images/微信logo.jpg" height="24px" style="border-radius: 5px;"/></button></li>
+        <li class="ms-3"><a class="link-body-emphasis" href="https://www.xiaohongshu.com/user/profile/56b96a636a6a6939107cbe3a?xhsshare=CopyLink&appuid=56b96a636a6a6939107cbe3a&apptime=1714554449"><img src="./assets/images/XiaohongshuLOGO.jpg" height="24px" alt="小红书logo"/></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">小蓝的微信号</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        xiaolanshu2022
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary">复制</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  const myModal = document.getElementById('myModal')
+  const myInput = document.getElementById('myInput')
+  myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+    })
+</script>
+
+</body>
+</html>
